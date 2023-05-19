@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-     
+      { frase &&
           
           <div className='container'>
 
@@ -47,7 +47,7 @@ function App() {
   
           </div>
 
-      
+      }
         
     </div>
   );
