@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+    --fuente : 'Manrope';
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.container{
+    width: 80%;
+    max-width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: var(--DarkGrayishBlue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    margin: 100px auto;
+    gap: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.adviceText{
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: var(--fuente);
+    color: var(--LightCyan);
 }
 
-.App-link {
-  color: #61dafb;
+.adviceNumber{
+    color: var(--NeonGreen);
+    font-family: var(--fuente);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imgDesktop{
+    display: none;
+    margin-bottom: 30px;
+}
+
+.imgMobile{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.containerBoton{
+    
+    background-color: var(--NeonGreen);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 50%;
+    padding: 30px;
+    position: absolute;
+    bottom: -30px;
+    cursor: pointer;
+}
+
+.containerBoton:hover{
+    box-shadow: 0 0 20px  2px var(--NeonGreen);
+}
+
+
+@media screen and (min-width:625px) {
+
+    .container{
+        height: 350px;
+        margin: 150px auto;
+    }
+    .imgDesktop{
+        display: flex;
+    }
+
+    .imgMobile{
+        display: none;
+    }
+
+    .adviceText{
+        font-size: 1.4rem;
+    }
+    .adviceNumber{
+        font-size: 0.8rem;
+    }
+    
 }
